@@ -9,4 +9,13 @@
         return $day . ' ' . $month . ' alle ' . $hour;
     }
 
+    function filterPosts($posts, $tag){
+        $filteredPosts = [];
+        foreach ($posts as $post){
+            if(in_array($tag, $post['tag'])){
+                $filteredPosts[] = $post;
+            }
+        }
+        return $filteredPosts;
+    }
 ?>
