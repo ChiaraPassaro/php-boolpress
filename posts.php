@@ -11,11 +11,14 @@
 
 <main>
     <h1 class="page__title">Tutti i Post</h1>
-    <form action="posts.php" method="get" class="filter">
-        <label for="tag">Inserisci un tag</label>
-        <input name="tag" type="text" class="filter__tag">
-        <button type="submit">Invia</button>
-    </form>
+
+    <div class="search">
+        <form action="posts.php" method="get" class="filter">
+            <label for="tag">Ricerca per tag</label>
+            <input name="tag" type="text" class="filter__tag">
+            <button type="submit">Invia</button>
+        </form>
+    </div>
 
     <?php
     if(count($posts) > 0){
@@ -28,9 +31,9 @@
             ?>
 
             <div class="post">
-                <a href="post-detail.php/?slug=<?php echo $slug; ?>"><h2 class="post_title"><?php echo $title; ?></h2></a>
-                <div class="post_date"><?php echo $date; ?></div>
-                <div class="post_content"><?php echo $content; ?> ...</div>
+                <a href="post-detail.php/?slug=<?php echo $slug; ?>"><h2 class="post__title"><?php echo $title; ?></h2></a>
+                <div class="post__date"><?php echo $date; ?></div>
+                <div class="post__content"><?php echo $content; ?> ...</div>
             </div>
 
     <?php }
@@ -39,4 +42,5 @@
     <?php }?>
 
 </main>
+
 <?php include 'footer.php' ?>

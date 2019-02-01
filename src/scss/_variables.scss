@@ -1,0 +1,12 @@
+$headerBg: #990033;
+$headerColor: #fff;
+$headerHoverColor: lighten($headerBg, 10);
+
+$fontSize: 18px;
+$fontFamily: 'Arvo', serif;
+
+$dateColor: grey;
+$linkColor: $headerBg;
+$linkColorHover: darken($linkColor, 10);
+
+$borderRadius: 10px;

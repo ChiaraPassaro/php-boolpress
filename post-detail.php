@@ -16,7 +16,8 @@
 <main>
 
     <?php if($this_post['is_post']){ //se il post esiste ?>
-        <div class="post-detail">
+
+        <div class="post post-detail">
             <h1 class="post__title"><?php echo $this_post['title']; ?></h1>
             <div class="post__date"><?php echo $this_post['date']; ?></div>
             <div class="post__img"><img src="<?php echo $this_post['img']; ?>" alt="<?php echo $this_post['title']; ?>"></div>
@@ -24,8 +25,11 @@
             <div class="post__tag">Tags: <?php echo $this_post['tags']; ?></div>
         </div>
         <div class="post__comments"></div>
-    <?php } else { ?>
+
+    <?php } else { //altrimenti errore ?>
+
         <h1 class="error"><?php echo $this_post['error']; ?></h1>
+
     <?php } ?>
 
 </main>

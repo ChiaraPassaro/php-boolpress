@@ -1,3 +1,6 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+
 *{
   margin: 0;
   padding: 0;
@@ -8,15 +11,84 @@
   display: none;
 }
 
+a{
+  text-decoration: none;
+  color: $linkColor;
+  &:hover,
+  &:active,
+  &:focus{
+    color: $linkColorHover;
+  }
+}
+
 body{
   width: 100%;
   text-align: center;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+}
+
+header{
+  padding: 30px;
+  background: $headerBg ;
+  line-height: 30px;
+  box-shadow: 0 3px 2px rgba(0,0,0,0.5);
+  a{
+    text-decoration: none;
+    color: $headerColor;
+    &:hover,
+    &:active,
+    &:focus{
+      color: $headerHoverColor;
+    }
+  }
 }
 
 main{
   width: 90%;
   margin: 40px auto;
   text-align: left;
+}
+
+.page__title{
+  text-transform: uppercase;
+}
+
+.search{
+  margin: 20px 0;
+  padding: 20px;
+  background: lightgray;
+  border-radius: $borderRadius;
+  label{
+    margin-right: 20px;
+  }
+}
+
+.post{
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &__date{
+    font-size: 80%;
+    color: $dateColor;
+    margin-bottom: 20px;
+  }
+  &__img{
+    float: left;
+    width: 50%;
+    margin-right: 20px;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    img{
+      width: 100%;
+      border-radius: $borderRadius;
+    }
+  }
 }
 
 .post__comments{
@@ -27,7 +99,12 @@ main{
     margin-bottom: 30px;
     text-transform: uppercase;
   }
+  &__date{
+    font-size: 80%;
+    color: $dateColor;
+  }
 }
+
 .comment{
     margin-bottom: 30px;
   &__name{
