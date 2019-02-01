@@ -18,4 +18,39 @@
         }
         return $filteredPosts;
     }
+
+    function getPost($posts, $slug_get){
+        //setto is_post false
+        $data_post = [
+            'is_post' => false
+        ];
+
+        foreach ($posts as $post) {
+            if ($slug_get === $post['slug']){
+                $title = $post['title'];
+                $date = getFormatDate($post['published_at']);
+                $img = $post['image'];
+                $content = $post['content'];
+                $tags = implode(', ', $post['tag']);
+                $data_post = [
+                    'title' => $title,
+                    'date' => $date,
+                    'img' => $img,
+                    'content' => $content,
+                    'tags' => $tags,
+                    'is_post' => true
+                ];
+            }
+        }
+
+        //se is_post non è true
+        if (!$data_post['is_post']){
+                $data_post = [
+                    'is_post' => false,
+                    'error' => 'La pagina non esiste'
+                ];
+        }
+
+        return $data_post;
+    }
 ?>

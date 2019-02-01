@@ -26,14 +26,17 @@
                 $content = substr ( $content , 0 , 150);
                 $date = getFormatDate($post['published_at']);
             ?>
+
             <div class="post">
                 <a href="post-detail.php/?slug=<?php echo $slug; ?>"><h2 class="post_title"><?php echo $title; ?></h2></a>
                 <div class="post_date"><?php echo $date; ?></div>
                 <div class="post_content"><?php echo $content; ?> ...</div>
             </div>
+
     <?php }
     } else { ?>
         <h1 class="error"><?php echo 'Non sono presenti post' ?></h1>
     <?php }?>
+
 </main>
 <?php include 'footer.php' ?>

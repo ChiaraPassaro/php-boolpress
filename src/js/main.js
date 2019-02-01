@@ -1,5 +1,6 @@
 var $ = require("jquery");
 var url = window.location.origin + '/php-boolpress/comments.php';
+
 $(document).ready(function () {
    var getData = window.location.search.substring(1).split('=');
    if(getData[0] === 'slug'){
