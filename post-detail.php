@@ -20,7 +20,7 @@
         <div class="post post-detail">
             <h1 class="post__title"><?php echo $this_post['title']; ?></h1>
             <div class="post__date"><?php echo $this_post['date']; ?></div>
-            <div class="post__img"><img src="<?php echo $this_post['img']; ?>" alt="<?php echo $this_post['title']; ?>"></div>
+            <div class="post__img"><img src="<?php echo $this_post['image']; ?>" alt="<?php echo $this_post['title']; ?>"></div>
             <div class="post__content"><?php echo $this_post['content']; ?></div>
             <div class="post__tag">Tags: <?php echo $this_post['tags']; ?></div>
         </div>

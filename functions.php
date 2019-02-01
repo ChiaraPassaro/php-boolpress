@@ -20,27 +20,17 @@
     }
 
     function getPost($posts, $slug_get){
-        //setto is_post false
-        $data_post = [
-            'is_post' => false
-        ];
 
         foreach ($posts as $post) {
+            //setto is_post false
+            $post['is_post'] = false ;
+
             if ($slug_get === $post['slug']){
-                $title = $post['title'];
-                $date = getFormatDate($post['published_at']);
-                $img = $post['image'];
-                $content = $post['content'];
-                $tags = implode(', ', $post['tag']);
-                $data_post = [
-                    'title' => $title,
-                    'date' => $date,
-                    'img' => $img,
-                    'content' => $content,
-                    'tags' => $tags,
-                    'is_post' => true
-                ];
+                $post['tag'] = implode(', ', $post['tag']);
+                $post['is_post'] = true ;
+                $data_post = $post;
             }
+
         }
 
         //se is_post non è true
