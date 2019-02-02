@@ -12,10 +12,14 @@
     function filterPosts($posts, $tag){
         $filteredPosts = [];
         foreach ($posts as $post){
-            foreach ($post['tag'] as $this_tag){
+            //nel caso volessi fare un confronto anche solo con le prime lettere
+            /*foreach ($post['tag'] as $this_tag){
                 if((stripos($this_tag, $tag) === 0 )){
                     $filteredPosts[] = $post;
                 }
+            }*/
+            if(in_array($tag, $post['tag'])){
+                $filteredPosts[] = $post;
             }
         }
         return $filteredPosts;
