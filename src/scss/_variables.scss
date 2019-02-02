@@ -3,10 +3,14 @@ $headerColor: #fff;
 $headerHoverColor: lighten($headerBg, 10);
 
 $fontSize: 18px;
-$fontFamily: 'Arvo', serif;
+$fontFamily: 'Open Sans', sans-serif;
+$fontFamilyLogo: 'Amatic SC', cursive;
 
 $dateColor: grey;
 $linkColor: $headerBg;
 $linkColorHover: darken($linkColor, 10);
 
 $borderRadius: 10px;
+
+$footerBg: darken($headerBg, 10);
+$footerColor: lightgrey;

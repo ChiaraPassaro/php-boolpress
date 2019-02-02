@@ -17,4 +17,5 @@
     ?>
     <header>
         <h1 class="blog__title"><a href="http://<?php echo $path; ?>posts.php">Il mio Blog</a></h1>
+        <?php if($page === 'posts') include 'search-bar.php'?>
     </header>

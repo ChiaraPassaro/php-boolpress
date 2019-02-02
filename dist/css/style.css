@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Arvo:400,700);* {
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans);* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,27 +21,53 @@ a:focus {
 
 body {
   width: 100%;
+  min-height: 100vh;
   text-align: center;
   font-size: 18px;
-  font-family: "Arvo", serif;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
-  padding: 30px;
+  padding: 30px 5%;
   background: #990033;
   line-height: 30px;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header a {
+header .blog__title {
+  font-family: "Amatic SC", cursive;
+}
+
+header .blog__title a {
   text-decoration: none;
   color: #fff;
 }
 
-header a:hover,
-header a:active,
-header a:focus {
+header .blog__title a:hover,
+header .blog__title a:active,
+header .blog__title a:focus {
   color: #cc0044;
+}
+
+.search {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.search .filter__tag {
+  width: 200px;
+  line-height: 10px;
+  padding: 10px;
+}
+
+.search .filter__label {
+  display: none;
 }
 
 main {
@@ -52,17 +78,6 @@ main {
 
 .page__title {
   text-transform: uppercase;
-}
-
-.search {
-  margin: 20px 0;
-  padding: 20px;
-  background: lightgray;
-  border-radius: 10px;
-}
-
-.search label {
-  margin-right: 20px;
 }
 
 .post {
@@ -118,5 +133,11 @@ main {
 
 .comment__name {
   font-weight: bold;
+}
+
+footer {
+  background: #660022;
+  padding: 10px;
+  color: lightgrey;
 }
 

@@ -2,6 +2,7 @@
     include 'data.php';
     include 'functions.php';
 
+    $page = 'posts';
     $tag_get = (!empty ($_GET['tag'])) ? $tag_get = $_GET['tag'] : null;
     $posts = (empty ($_GET['tag'])) ? $posts : filterPosts($posts, $tag_get);
 
@@ -11,8 +12,6 @@
 
 <main>
     <h1 class="page__title">Tutti i Post</h1>
-
-    <?php include "search-bar.php";?>
 
     <?php
     if(count($posts) > 0){
