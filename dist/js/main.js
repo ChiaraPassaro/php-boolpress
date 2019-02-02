@@ -10511,16 +10511,9 @@ $(document).ready(function () {
         search.id++;
         search.pending = true;
         getTags(search.text);
-        /*console.log('prima');
-        console.log(search.text);
-        console.log(search.pending);*/
       } else {
-        /*console.log('seconda');
-        console.log(text);
-        console.log(search.pending);
-        console.log(search.tags);*/
         var lastFilteredTags = searchTag(search.tags, text);
-        printSuggestions(lastFilteredTags); //console.log(lastFilteredTags);
+        printSuggestions(lastFilteredTags);
       }
     } else {
       text = $(this).val();
@@ -10531,16 +10524,10 @@ $(document).ready(function () {
         search.text = undefined;
         printSuggestions();
       } else {
-        search.text = text; //console.log(search.tags);
-
+        search.text = text;
         var filteredTags = searchTag(search.tags, text);
-        printSuggestions(filteredTags); //console.log(filteredTags);
+        printSuggestions(filteredTags);
       }
-    }
-
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      searchForm.submit();
     }
   });
 });
