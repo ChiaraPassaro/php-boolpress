@@ -12,13 +12,7 @@
 <main>
     <h1 class="page__title">Tutti i Post</h1>
 
-    <div class="search">
-        <form action="posts.php" method="get" class="filter">
-            <label for="tag">Ricerca per tag</label>
-            <input name="tag" type="text" class="filter__tag">
-            <button type="submit">Invia</button>
-        </form>
-    </div>
+    <?php include "search-bar.php";?>
 
     <?php
     if(count($posts) > 0){

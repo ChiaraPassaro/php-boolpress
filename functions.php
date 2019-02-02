@@ -12,8 +12,10 @@
     function filterPosts($posts, $tag){
         $filteredPosts = [];
         foreach ($posts as $post){
-            if(in_array($tag, $post['tag'])){
-                $filteredPosts[] = $post;
+            foreach ($post['tag'] as $this_tag){
+                if((stripos($this_tag, $tag) === 0 )){
+                    $filteredPosts[] = $post;
+                }
             }
         }
         return $filteredPosts;
@@ -24,7 +26,7 @@
         foreach ($posts as $post) {
             //setto is_post false
             $post['is_post'] = false ;
-
+            //inserire anche che contiene
             if ($slug_get === $post['slug']){
                 $post['tag'] = implode(', ', $post['tag']);
                 $post['is_post'] = true ;
