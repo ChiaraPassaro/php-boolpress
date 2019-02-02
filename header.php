@@ -9,6 +9,12 @@
         <title><?php if (isset($page_title)) echo $page_title ?></title>
     </head>
     <body>
+    <?php
+    $path_server = $_SERVER['HTTP_HOST'];
+    $path_folder = explode('/', $_SERVER['PHP_SELF']);
+    $path_folder = $path_folder[1];
+    $path = $path_server . '/'.$path_folder.'/';
+    ?>
     <header>
-        <h1 class="blog__title"><a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/php-boolpress/posts.php">Il mio Blog</a></h1>
+        <h1 class="blog__title"><a href="http://<?php echo $path; ?>posts.php">Il mio Blog</a></h1>
     </header>
