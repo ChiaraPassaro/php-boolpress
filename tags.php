@@ -14,7 +14,7 @@
             }
         }
     }
-
+    //sleep(1); per test su chiamate pendenti
     echo json_encode($tags);
 
 ?>
